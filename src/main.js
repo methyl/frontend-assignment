@@ -64,11 +64,7 @@ if (__DEV__ && module.hot) {
     ReactDOM.render(<RedBox error={error} />, MOUNT_NODE)
   }
   render = () => {
-    try {
-      renderApp(Math.random())
-    } catch (error) {
-      renderError(error)
-    }
+    renderApp(Math.random())
   }
   module.hot.accept(['./routes/index'], () => render())
 }
